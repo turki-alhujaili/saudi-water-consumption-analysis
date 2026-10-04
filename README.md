@@ -19,7 +19,17 @@ A data analysis project on how much water each Saudi region uses per person, how
 5. **Southern regions are catching up fast.** Use per person rose 390% in Jazan, 207% in Al-Bahah and 125% in Najran since 2010, from a low base. This could reflect expanding water networks, which would be worth confirming with network coverage data.
 6. **If the 2018–2023 trend continues, urban demand reaches about 3.75B m³ by 2030.** This is a simple linear trend for illustration, not an official forecast.
 
-## Charts
+## Power BI dashboard
+
+![Power BI dashboard](images/06_powerbi_dashboard.png)
+
+An interactive dashboard (`powerbi/water_dashboard.pbix`) with a custom water theme (`powerbi/water_theme.json`):
+
+- **Year slicer:** the KPI cards, the regional ranking and the consumption shares update for the selected year, while both trend lines always show 2010–2023
+- **Click any region** to filter the whole dashboard to that region
+- **Per-capita measure done right:** litres per person per day is calculated as total consumption ÷ total population in DAX, not as an average of regional ratios, so the national figure is weighted correctly by population
+
+## Python charts
 
 ![National per capita](images/01_national_per_capita.png)
 ![Regions per capita](images/02_regions_per_capita.png)
@@ -66,7 +76,7 @@ python scripts/analysis.py
 ```
 
 ## Tools
-Python · pandas · matplotlib · Git
+Python · pandas · matplotlib · Power BI · DAX · Git
 
 ---
 **Author:** Turki Alhujaili, Computer Science graduate, Taibah University
