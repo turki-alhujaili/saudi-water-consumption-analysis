@@ -27,7 +27,12 @@ An interactive dashboard (`powerbi/water_dashboard.pbix`) with a custom water th
 
 - **Year slicer:** the KPI cards, the regional ranking and the consumption shares update for the selected year, while both trend lines always show 2010–2023
 - **Click any region** to filter the whole dashboard to that region
+- **Dynamic KPI selector:** one regional chart switches between litres per person, total consumption and population, using a disconnected `KPI` table with `SWITCH` and `SELECTEDVALUE` in DAX, plus a dynamic title and dynamic number format
 - **Per-capita measure done right:** litres per person per day is calculated as total consumption ÷ total population in DAX, not as an average of regional ratios, so the national figure is weighted correctly by population
+
+![One chart, three answers](images/07_kpi_selector.png)
+
+Switching the KPI tells a story a single measure hides: Riyadh uses the most water in total, but Al-Madinah uses the most per person.
 
 ## Python charts
 
